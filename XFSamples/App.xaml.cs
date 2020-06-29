@@ -5,6 +5,7 @@ using XFSamples.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("Samantha.ttf", Alias = "SamantaFont")]
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XFSamples
 {
@@ -21,6 +22,7 @@ namespace XFSamples
 
         protected override async void OnInitialized()
         {
+            Device.SetFlags(new string[] { "Shapes_Experimental" });
             InitializeComponent();
 
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
