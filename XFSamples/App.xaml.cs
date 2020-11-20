@@ -32,6 +32,8 @@ namespace XFSamples
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<SelectImagesPage, SelectImagesPageViewModel>();
+            containerRegistry.RegisterForNavigation<ImageLoadingPage, ImageLoadingPageViewModel>();
         }
     }
 }
