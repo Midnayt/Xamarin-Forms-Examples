@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-latest
     
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.1.1
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
@@ -28,11 +28,11 @@ jobs:
     
     steps:
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.1.1
       
     - name: Android
       run: |
-        cd Xamarin-Forms-Examples
+        cd 
         nuget restore
         cd XFSamples.Android
         msbuild XFSamples.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
@@ -42,10 +42,10 @@ jobs:
     
     steps:
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.1.1
       
     - name: iOS
       run: |
-        cd Xamarin-Forms-Examples
+        cd 
         nuget restore
         msbuild XFSamples.iOS/XFSamples.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
