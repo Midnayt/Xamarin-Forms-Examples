@@ -32,7 +32,7 @@ jobs:
       
     - name: Android
       run: |
-        cd XFSamples
+        cd Xamarin-Forms-Examples
         nuget restore
         cd XFSamples.Android
         msbuild XFSamples.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
@@ -46,6 +46,6 @@ jobs:
       
     - name: iOS
       run: |
-        cd XFSamples
+        cd Xamarin-Forms-Examples
         nuget restore
         msbuild XFSamples.iOS/XFSamples.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
