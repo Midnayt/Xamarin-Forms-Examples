@@ -34,8 +34,8 @@ jobs:
       run: |
         cd Xamarin-Forms-Examples
         nuget restore
-        cd Xamarin-Forms-Examples.Android
-        msbuild Xamarin-Forms-Examples.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
+        cd XFSamples.Android
+        msbuild XFSamples.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
   iOS:
 
     runs-on: macos-latest
@@ -48,4 +48,4 @@ jobs:
       run: |
         cd Xamarin-Forms-Examples
         nuget restore
-        msbuild Xamarin-Forms-Examples.iOS/Xamarin-Forms-Examples.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+        msbuild XFSamples.iOS/XFSamples.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
